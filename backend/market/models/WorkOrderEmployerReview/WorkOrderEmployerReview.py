@@ -5,7 +5,13 @@ from core.models import TimeStampMixin
 
 
 class WorkOrderEmployerReview(TimeStampMixin):
-    RATING_CHOICES = (0, "1")(1, "2")(2, "3")(3, "4")(4, "5")
+    RATING_CHOICES = (
+        (0, "1"),
+        (1, "2"),
+        (2, "3"),
+        (3, "4"),
+        (4, "5"),
+    )
 
     work_order = models.OneToOneField(
         "market.WorkOrder",
