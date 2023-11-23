@@ -22,4 +22,7 @@ class UserAuthProfile(models.Model):
     discord_hash = models.CharField(
         _("Discord Hash"), max_length=500, null=False, blank=False
     )
-    phone_number = PhoneNumberField(null=False, blank=False, unique=True)
+    email = models.EmailField(_("Email"), unique=True, blank=True, null=True)
+    phone_number = PhoneNumberField(
+        _("Phone Number"), null=False, blank=False, unique=True
+    )
