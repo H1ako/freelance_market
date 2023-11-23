@@ -16,6 +16,9 @@ class User(AbstractUser):
     def _create_profiles(self):
         from users.models import UserProfile, EmployerProfile, EmployeeProfile
 
-        UserProfile.objects.create(user=self)
-        EmployerProfile.objects.create(user=self)
-        EmployeeProfile.objects.create(user=self)
+        if not self.profile:
+            UserProfile.objects.create(user=self)
+        if not self.employer_profile:
+            EmployerProfile.objects.create(user=self)
+        if not self.employee_profile:
+            EmployeeProfile.objects.create(user=self)

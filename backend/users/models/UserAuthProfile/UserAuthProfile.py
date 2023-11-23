@@ -24,5 +24,5 @@ class UserAuthProfile(models.Model):
     )
     email = models.EmailField(_("Email"), unique=True, blank=True, null=True)
     phone_number = PhoneNumberField(
-        _("Phone Number"), null=False, blank=False, unique=True
+        _("Phone Number"), null=True, blank=True, unique=True
     )
