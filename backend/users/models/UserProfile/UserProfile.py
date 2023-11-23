@@ -11,6 +11,6 @@ class UserProfile(models.Model):
     first_name = models.CharField(_("First Name"), max_length=35, blank=True, null=True)
     last_name = models.CharField(_("Last Name"), max_length=55, blank=True, null=True)
     avatar = models.ImageField(
-        _("Avatar"), upload_to="users/avatars/", blank=True, null=True
+        _("Avatar"), upload_to="media/users/avatars/", blank=True, null=True
     )
     birth_date = models.DateTimeField(_("Birth Date"), blank=True, null=True)
