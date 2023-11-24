@@ -14,6 +14,6 @@ class UserAchievement(TimeStampMixin):
     achievement = models.ForeignKey(
         "achievements.Achievement",
         on_delete=models.CASCADE,
-        related_name="user_profiles",
+        related_name="user_achievements",
         verbose_name=_("Achievement"),
     )
