@@ -11,4 +11,4 @@ class PortfolioWorkImage(TimeStampMixin):
         related_name="images",
         verbose_name=_("Portfolio Work"),
     )
-    src = models.ImageField(_("Source"), upload_to="static/users/portfolio_works/")
+    src = models.ImageField(_("Source"), upload_to="media/users/portfolio_works/")
