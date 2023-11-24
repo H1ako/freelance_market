@@ -5,3 +5,4 @@ from .EmployeeProfile.EmployeeProfile import EmployeeProfile
 from .EmployerProfile.EmployerProfile import EmployerProfile
 from .EmployeePortfolioWork.EmployeePortfolioWork import EmployeePortfolioWork
 from .PortfolioWorkImage.PortfolioWorkImage import PortfolioWorkImage
+from .UserAchievement.UserAchievement import UserAchievement

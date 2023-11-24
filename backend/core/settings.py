@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # Apps
     "authentication",
     "chats",
+    "achievements",
     "users",
     "payments",
     "market",
@@ -140,6 +141,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 - Custom Settings
 """
 AUTH_USER_MODEL = "users.User"
+IMAGE_FIELD_MAX_FILE_SIZE = 1000000
 
 
 """
@@ -147,6 +149,7 @@ AUTH_USER_MODEL = "users.User"
 """
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
+ 
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
