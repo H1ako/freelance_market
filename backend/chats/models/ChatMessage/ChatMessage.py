@@ -17,4 +17,4 @@ class ChatMessage(TimeStampMixin):
         related_name="messages",
         verbose_name=_("From User"),
     )
-    
+    is_checked = models.BooleanField(_("Is Checked"), default=False)
