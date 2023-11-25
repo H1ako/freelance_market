@@ -10,10 +10,9 @@ from .models import (
     PortfolioWorkImage,
     UserAchievement,
     UserActivity,
+    EmployeeFavouriteWorkOrder,
 )
 
-
-# Register your models here.
 
 admin.site.register(User)
 admin.site.register(UserProfile)
@@ -24,3 +23,4 @@ admin.site.register(EmployeePortfolioWork)
 admin.site.register(PortfolioWorkImage)
 admin.site.register(UserAchievement)
 admin.site.register(UserActivity)
+admin.site.register(EmployeeFavouriteWorkOrder)

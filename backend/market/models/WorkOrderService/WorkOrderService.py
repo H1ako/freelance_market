@@ -7,7 +7,7 @@ from market.models import WorkOrder
 
 class WorkOrderService(TimeStampMixin):
     work_order = models.ForeignKey(
-        "market.WorkOrder",
+        "market.ActiveWorkOrder",
         on_delete=models.CASCADE,
         related_name="services",
         verbose_name=_("Work Order"),

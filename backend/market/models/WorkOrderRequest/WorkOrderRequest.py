@@ -15,6 +15,14 @@ class WorkOrderRequest(TimeStampMixin):
         (DECLINED, "Declined"),
     )
 
+    FULL_PAYMENT = 0
+    STEP_PAYMENT = 1
+
+    PAYMENT_TYPES = (
+        (FULL_PAYMENT, "Full Payment"),
+        (STEP_PAYMENT, "Step Payment"),
+    )
+
     employee = models.ForeignKey(
         "users.EmployeeProfile",
         on_delete=models.SET_NULL,
@@ -28,6 +36,9 @@ class WorkOrderRequest(TimeStampMixin):
         related_name="work_requests",
         verbose_name=_("Work Order"),
         null=True,
+    )
+    payment_type = models.CharField(
+        _("Payment Type"), max_length=50, choices=PAYMENT_TYPES, default=FULL_PAYMENT
     )
     text = models.TextField(_("Text"))
     price_from = models.PositiveIntegerField(_("Price From"))

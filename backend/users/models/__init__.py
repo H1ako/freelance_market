@@ -7,3 +7,6 @@ from .EmployeePortfolioWork.EmployeePortfolioWork import EmployeePortfolioWork
 from .PortfolioWorkImage.PortfolioWorkImage import PortfolioWorkImage
 from .UserAchievement.UserAchievement import UserAchievement
 from .UserActivity.UserActivity import UserActivity
+from .EmployeeFavouriteWorkOrder.EmployeeFavouriteWorkOrder import (
+    EmployeeFavouriteWorkOrder,
+)

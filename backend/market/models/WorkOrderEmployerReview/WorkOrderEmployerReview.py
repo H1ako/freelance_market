@@ -14,7 +14,7 @@ class WorkOrderEmployerReview(TimeStampMixin):
     )
 
     work_order = models.OneToOneField(
-        "market.WorkOrder",
+        "market.ActiveWorkOrder",
         on_delete=models.SET_NULL,
         related_name="employer_review",
         verbose_name=_("Work Order"),
