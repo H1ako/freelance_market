@@ -30,17 +30,16 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+DEFAULT_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # Libs
-    "rest_framework",
-    "phonenumber_field",
-    # Apps
+]
+
+LOCAL_APPS = [
     "authentication",
     "chats",
     "achievements",
@@ -48,6 +47,15 @@ INSTALLED_APPS = [
     "payments",
     "market",
 ]
+
+INSTALLED_APPS = (
+    DEFAULT_APPS
+    + LOCAL_APPS
+    + [
+        "rest_framework",
+        "phonenumber_field",
+    ]
+)
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -86,11 +94,11 @@ WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        'NAME': 'freelance_market',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        "NAME": "freelance_market",
+        "USER": "root",
+        "PASSWORD": "root",
+        "HOST": "localhost",
+        "PORT": "3306",
     }
 }
 
@@ -141,6 +149,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 - Custom Settings
 """
 AUTH_USER_MODEL = "users.User"
+
 IMAGE_FIELD_MAX_FILE_SIZE = 1000000
 
 
@@ -148,8 +157,7 @@ IMAGE_FIELD_MAX_FILE_SIZE = 1000000
 - Rest Framework Settings
 """
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
- 
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
     ]
 }
