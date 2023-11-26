@@ -26,3 +26,22 @@ class UserAuthProfile(models.Model):
     phone_number = PhoneNumberField(
         _("Phone Number"), null=True, blank=True, unique=True
     )
+
+    @property
+    def is_vkontakte_associated(self):
+        # TODO: This
+        return ""
+
+    @property
+    def is_google_associated(self):
+        # TODO: This
+        return ""
+
+    @property
+    def is_discord_associated(self):
+        # TODO: This
+        return ""
+
+    @property
+    def is_phone_number_associated(self):
+        return self.phone_number != None

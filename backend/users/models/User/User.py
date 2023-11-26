@@ -13,6 +13,11 @@ class User(AbstractUser):
 
     objects = CustomUserManager()
 
+    @property
+    def link(self):
+        # TODO: This
+        return ""
+
     def _create_profiles(self):
         from users.models import UserProfile, EmployerProfile, EmployeeProfile
 

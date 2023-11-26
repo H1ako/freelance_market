@@ -8,3 +8,8 @@ class Achievement(TimeStampMixin):
     title = models.CharField(_("Description"), max_length=70)
     description = models.TextField(_("Description"), null=True, blank=True)
     icon = models.ImageField(_("Icon"), upload_to="static/achievements/icons/")
+
+    @property
+    def icon_url(self):
+        # TODO: This
+        return ""

@@ -18,13 +18,6 @@ class ActiveWorkOrder(TimeStampMixin):
         (ABORTED, "Aborted"),
     )
 
-    employer = models.ForeignKey(
-        "users.EmployerProfile",
-        on_delete=models.SET_NULL,
-        related_name="active_work_orders",
-        verbose_name=_("Employer"),
-        null=True,
-    )
     employee = models.ForeignKey(
         "users.EmployeeProfile",
         on_delete=models.SET_NULL,
@@ -32,9 +25,13 @@ class ActiveWorkOrder(TimeStampMixin):
         verbose_name=_("Employee"),
         null=True,
     )
-
-    title = models.CharField(_("Title"), max_length=70)
-    description = models.TextField(_("Description"))
+    work_order = models.OneToOneField(
+        "market.WorkOrder",
+        related_name="active_work_order",
+        on_delete=models.SET_NULL,
+        verbose_name=_("Work Order"),
+        null=True,
+    )
     price = models.PositiveIntegerField(_("Price"))
     term = models.PositiveIntegerField(_("Term"))  # days
     expires_at = models.DateTimeField(_("Expires At"))

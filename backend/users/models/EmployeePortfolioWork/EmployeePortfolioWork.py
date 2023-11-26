@@ -11,7 +11,7 @@ class EmployeePortfolioWork(TimeStampMixin):
         related_name="portfolio_works",
         verbose_name=_("Employee"),
     )
-    work_order = models.ForeignKey(
+    work_order = models.OneToOneField(
         "market.WorkOrder",
         on_delete=models.SET_NULL,
         related_name="employee_portfolio_work",

@@ -8,9 +8,20 @@ class UserProfile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, related_name="profile", verbose_name=_("User")
     )
+    about = models.TextField(_("About"), blank=True, null=True)
     first_name = models.CharField(_("First Name"), max_length=35, blank=True, null=True)
     last_name = models.CharField(_("Last Name"), max_length=55, blank=True, null=True)
     avatar = models.ImageField(
         _("Avatar"), upload_to="media/users/avatars/", blank=True, null=True
     )
     birth_date = models.DateTimeField(_("Birth Date"), blank=True, null=True)
+
+    @property
+    def avatar_url(self):
+        # TODO: This
+        return ""
+    
+    @property
+    def show_birth_date(self):
+        # TODO: This
+        return ""

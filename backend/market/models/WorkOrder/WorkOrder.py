@@ -11,11 +11,13 @@ class WorkOrder(TimeStampMixin):
     WAITING_FOR_EMPLOYEE = 0
     ACTIVE = 1
     CANCELED = 2
+    DECLINED = 3
 
     ORDER_STATUSES = (
         (WAITING_FOR_EMPLOYEE, "Waiting"),
         (ACTIVE, "Active"),
         (CANCELED, "Canceled"),
+        (DECLINED, "Declined"),
     )
 
     employer = models.ForeignKey(
@@ -24,6 +26,14 @@ class WorkOrder(TimeStampMixin):
         related_name="work_orders",
         verbose_name=_("Employer"),
         null=True,
+    )
+    employee = models.ForeignKey(
+        "users.EmployeeProfile",
+        on_delete=models.CASCADE,
+        related_name="personal_work_orders",
+        verbose_name=_("Employee"),
+        null=True,
+        blank=True,
     )
     title = models.CharField(_("Title"), max_length=70)
     description = models.TextField(_("Description"))
@@ -67,6 +77,9 @@ class WorkOrder(TimeStampMixin):
         self.save()
 
     def _cancel(self):
+        self._set_status(self.CANCELED)
+
+    def _decline(self):
         self._set_status(self.CANCELED)
 
     def _make_active(self):
