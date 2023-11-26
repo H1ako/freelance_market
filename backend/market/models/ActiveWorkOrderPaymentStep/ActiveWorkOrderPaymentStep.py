@@ -11,5 +11,5 @@ class ActiveWorkOrderPaymentStep(TimeStampMixin):
         related_name="payment_steps",
         verbose_name=_("Work Order"),
     )
-    summary = models.CharField(_("Title"), max_length=100)
+    summary = models.CharField(_("Summary"), max_length=100)
     price = models.PositiveIntegerField(_("Price"))
