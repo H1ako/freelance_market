@@ -53,6 +53,7 @@ INSTALLED_APPS = (
     + LOCAL_APPS
     + [
         "rest_framework",
+        "graphene_django",
         "phonenumber_field",
         "corsheaders",
     ]
