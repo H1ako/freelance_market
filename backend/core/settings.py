@@ -178,3 +178,11 @@ CORS_ALLOWED_ORIGINS = (
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
 
 CORS_ALLOW_CREDENTIALS = True
+
+
+"""
+- GraphQL Graphene Settings
+"""
+GRAPHENE = {
+    "SCHEMA": "core.schema.schema"
+}
