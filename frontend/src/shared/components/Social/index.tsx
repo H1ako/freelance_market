@@ -2,13 +2,13 @@ import styles from './Social.module.css'
 
 interface Props {
   children?: React.ReactNode
-  url: string
+  href: string
   name: string
   className?: string
 }
 
 export default function Social({
-  url,
+  href,
   name,
   children = null,
   className = '',
@@ -16,7 +16,7 @@ export default function Social({
   return (
     <li className={styles.socials__social}>
       <a
-        href={url}
+        href={href}
         no-referrerPolicy=''
         aria-label={name}
         className={`${styles.social__button} ${className}`}
