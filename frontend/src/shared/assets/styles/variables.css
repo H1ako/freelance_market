@@ -1,0 +1,30 @@
+:root {
+    /* -----start Colors----- */
+    --color-primary: #8989E6;
+    --color-secondary: rgb(33, 33, 33);
+    --color-accent: #DDDD22;
+
+    --color-text: #EAEAEB;
+    --color-bg: #0F0F10;
+    --color-el-bg: rgb(33, 33, 33, .1);
+
+    --color-positive: #31D154;
+    --color-negative: #E23A3A;
+    /* -----end Colors----- */
+
+    /* -----start Font Sizes----- */
+    --font-size-h1: 48px;
+    --font-size-h2: 36px;
+    --font-size-h3: 24px;
+    --font-size-h4: 18px;
+    --font-size-h5: 12px;
+    --font-size-h6: 10px;
+    --font-size-default: 14px;
+    /* -----end Font Sizes----- */
+
+    /* -----start Sizes----- */
+    --width-content: min(100% - var(--padding-main) * 2, 1200px);
+
+    --padding-main: 1rem;
+    /* -----end Sizes----- */
+}
