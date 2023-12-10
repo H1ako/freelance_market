@@ -1,6 +1,6 @@
 import SmallLogo from '@/shared/components/ui/SmallLogo'
 import Socials from '@/shared/components/Socials'
-import styles from './FooterSocialsBlock.module.css'
+import styles from './styles.module.scss'
 
 export default function FooterSocialsBlock() {
   return (

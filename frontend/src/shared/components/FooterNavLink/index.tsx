@@ -1,5 +1,7 @@
-import { useRouter } from 'next/router'
-import styles from './FooterNavLink.module.css'
+'use client'
+
+import { usePathname } from 'next/navigation'
+import styles from './styles.module.scss'
 
 interface Props {
   children: React.ReactNode
@@ -7,8 +9,8 @@ interface Props {
 }
 
 export default function FooterNavLink({ children, href }: Props) {
-  const router = useRouter()
-  const isActive = router.pathname === href
+  const pathname = usePathname()
+  const isActive = pathname === href
 
   return (
     <li className={styles.list__link} data-active={isActive}>

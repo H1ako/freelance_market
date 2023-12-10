@@ -1,4 +1,6 @@
-import styles from './Button.module.css'
+'use client'
+
+import styles from './styles.module.scss'
 
 export interface Props
   extends React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {

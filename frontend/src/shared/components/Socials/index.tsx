@@ -1,5 +1,5 @@
 import Social from '@/shared/components/Social'
-import styles from './Socials.module.css'
+import styles from './styles.module.scss'
 
 export default function Socials() {
   return (

@@ -1,4 +1,4 @@
-import styles from './Social.module.css'
+import styles from './styles.module.scss'
 
 interface Props {
   children?: React.ReactNode
