@@ -1,4 +1,4 @@
-import FooterNavLink from '@/shared/components/FooterNavLink'
+import FooterNavLink from './FooterNavLink'
 import styles from './styles.module.scss'
 
 export default function FooterNavBlock() {

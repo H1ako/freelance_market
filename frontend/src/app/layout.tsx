@@ -3,8 +3,8 @@ import '../shared/assets/styles/fonts.scss'
 import '../shared/assets/styles/variables.scss'
 import '../shared/assets/styles/globals.scss'
 import type { Metadata } from 'next'
-import Footer from '../shared/components/Footer'
-import SiteSearchBlock from '@/shared/components/blocks/SiteSearchBlock'
+import SiteSeachHeader from '@/shared/components/common/header/SiteSeachHeader'
+import Footer from '@/shared/components/common/Footer'
 
 export const metadata: Metadata = {
   title: 'Workerss',
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
       <body>
-        <SiteSearchBlock />
+        <SiteSeachHeader />
         {children}
         <Footer />
       </body>

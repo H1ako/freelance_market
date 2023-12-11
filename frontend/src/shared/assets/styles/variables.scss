@@ -1,33 +1,37 @@
 :root {
-    /* -----start Colors----- */
-    --color-primary: #8989E6;
-    --color-secondary: rgb(33, 33, 33);
-    --color-accent: #DDDD22;
+  /* -----start Colors----- */
+  --color-primary: #8989e6;
+  --color-secondary: rgb(33, 33, 33);
+  --color-accent: #dddd22;
 
-    --color-text: #EAEAEB;
-    --color-text-secondary: rgb(234, 234, 235, .7);
-    --color-bg: #0F0F10;
-    --color-el-bg: rgb(234, 234, 235, .1);;
+  --color-text: #eaeaeb;
+  --color-text-secondary: rgb(234, 234, 235, 0.7);
+  --color-bg: #0f0f10;
+  --color-el-bg: rgb(234, 234, 235, 0.05);
 
-    --color-positive: #31D154;
-    --color-negative: #E23A3A;
-    /* -----end Colors----- */
+  --color-positive: #31d154;
+  --color-negative: #e23a3a;
+  /* -----end Colors----- */
 
-    /* -----start Font Sizes----- */
-    --font-size-h1: 48px;
-    --font-size-h2: 32px;
-    --font-size-h3: 24px;
-    --font-size-h4: 18px;
-    --font-size-h5: 12px;
-    --font-size-h6: 10px;
-    --font-size-default: 14px;
-    /* -----end Font Sizes----- */
+  /* -----start Font Sizes----- */
+  --font-size-h1: 48px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 18px;
+  --font-size-h5: 12px;
+  --font-size-h6: 10px;
+  --font-size-default: 14px;
+  /* -----end Font Sizes----- */
 
-    /* -----start Sizes----- */
-    --width-content: min(100% - var(--padding-main) * 2, 1200px);
+  /* -----start Sizes----- */
+  --width-content: min(100% - var(--padding-main) * 2, 1200px);
 
-    --border-radius-button: .25em;
+  --border-radius-button: 0.25em;
 
-    --padding-main: 1.5rem;
-    /* -----end Sizes----- */
+  --padding-main: 1.5rem;
+  /* -----end Sizes----- */
+
+  /* -----start Transitions----- */
+  --transition-ui: 300ms;
+  /* -----end Transitions----- */
 }

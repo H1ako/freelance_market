@@ -1,7 +1,7 @@
 'use client'
 
-import Button from '@/shared/components/ui/Button'
-import AccentButton from '@/shared/components/ui/AccentButton'
+import Button from '@/shared/components/ui/buttons/Button'
+import AccentButton from '@/shared/components/ui/buttons/AccentButton'
 import styles from './styles.module.scss'
 
 export default function HeroBlock() {

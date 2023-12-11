@@ -1,4 +1,4 @@
-import Social from '@/shared/components/Social'
+import Social from './Social'
 import styles from './styles.module.scss'
 
 export default function Socials() {

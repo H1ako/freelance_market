@@ -1,0 +1,23 @@
+.button {
+  --hover-bg: var(--color-secondary);
+  --hover-color: var(--color-text);
+
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 0.75em 1.25em;
+  background: var(--color-el-bg);
+  border-radius: var(--border-radius-button);
+  font-size: var(--font-size-default);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  transition: var(--transition-ui);
+
+  &:hover,
+  &:not(:focus):focus-visible {
+    background: var(--hover-bg);
+    color: var(--hover-color);
+  }
+}

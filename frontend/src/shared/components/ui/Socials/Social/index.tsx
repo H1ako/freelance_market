@@ -22,7 +22,6 @@ export default function Social({
         className={`${styles.social__button} ${className}`}
       >
         {children}
-        {name}
       </a>
     </li>
   )

@@ -1,0 +1,12 @@
+.accent_btn {
+  --hover-bg: var(--color-primary);
+  --hover-color: var(--color-bg);
+
+  background: var(--color-primary);
+  color: var(--color-bg);
+
+  &:hover,
+  &:not(:focus):focus-visible {
+    box-shadow: 0 0 1000px var(--color-primary);
+  }
+}

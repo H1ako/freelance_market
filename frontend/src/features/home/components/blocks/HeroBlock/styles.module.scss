@@ -1,9 +1,28 @@
 .hero_section {
+  position: relative;
   height: 100vh;
   height: 100svh;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  // z-index: 1;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   border-radius: 9999px;
+  //   background: var(--color-primary);
+  //   aspect-ratio: 1;
+  //   height: 60vh;
+  //   height: 60svh;
+  //   left: 0;
+  //   top: 30vh;
+  //   top: 30svh;
+  //   translate: -50%;
+  //   z-index: -1;
+  //   opacity: 0.3;
+  //   filter: blur(40px);
+  // }
 
   &__title {
     font-weight: 500;
@@ -12,7 +31,7 @@
 
   &__subtitle {
     font-weight: 100;
-    margin-top: .75rem;
+    margin-top: 0.75rem;
     color: var(--color-text-secondary);
   }
 
