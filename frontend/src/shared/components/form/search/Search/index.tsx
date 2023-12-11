@@ -1,6 +1,8 @@
 'use client'
 
 import styles from './styles.module.scss'
+import SearchResults from './SearchResults'
+import SearchBar from './SearchBar'
 
 interface Props {
   placeholder: string
@@ -9,5 +11,10 @@ interface Props {
 }
 
 export default function Search({ placeholder, search, results }: Props) {
-  return <div className={styles.search}></div>
+  return (
+    <div className={styles.search}>
+      <SearchBar placeholder={placeholder} search={search} />
+      <SearchResults results={results} />
+    </div>
+  )
 }
