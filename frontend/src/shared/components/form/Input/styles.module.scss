@@ -1,0 +1,13 @@
+.input {
+    border-radius: var(--border-radius-button);
+    background: var(--color-el-bg);
+    color: var(--color-text);
+    padding: .5rem 1.5rem;
+    font-size: var(--font-size-default);
+    outline: transparent;
+    border: none;
+
+    &::placeholder {
+        color: var(--color-text-secondary);
+    }
+}

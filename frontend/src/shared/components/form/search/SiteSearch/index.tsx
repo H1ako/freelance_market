@@ -1,12 +1,23 @@
 'use client'
 
-import Search from '@/shared/components/form/search/Search'
+import { signal, useSignal } from '@preact/signals-react'
+import Search from '../Search'
+
+// const results = signal<number>(0)
+// const searchQuery = signal<string>('')
 
 export default function SiteSearch() {
-  const search = null
-  const results = null
+  const results = useSignal<number>(0)
+  const searchQuery = useSignal<string>('')
+
+  const search = (query: string) => {}
 
   return (
-    <Search placeholder='Поиск по сайту' search={search} results={results} />
+    <Search
+      searchQuery={searchQuery}
+      placeholder='Поиск по сайту'
+      search={search}
+      results={results}
+    />
   )
 }

@@ -3,7 +3,8 @@
 import SearchResult from './SearchResult'
 import styles from './styles.module.scss'
 
-interface Props {
+export interface Props {
+  results: any
 }
 
 export default function SearchResults({  }: Props) {

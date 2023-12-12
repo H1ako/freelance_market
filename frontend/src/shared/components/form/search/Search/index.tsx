@@ -1,20 +1,25 @@
 'use client'
 
 import styles from './styles.module.scss'
-import SearchResults from './SearchResults'
-import SearchBar from './SearchBar'
+import SearchResults, { Props as SearchResultsProps } from './SearchResults'
+import SearchBar, { Props as SearchBarProps } from './SearchBar'
 
-interface Props {
-  placeholder: string
-  search: any
-  results: any
-}
+interface Props extends SearchBarProps, SearchResultsProps {}
 
-export default function Search({ placeholder, search, results }: Props) {
+export default function Search({
+  searchQuery,
+  placeholder,
+  search,
+  results,
+}: Props) {
   return (
     <div className={styles.search}>
-      <SearchBar placeholder={placeholder} search={search} />
-      <SearchResults results={results} />
+      <SearchBar
+        searchQuery={searchQuery}
+        placeholder={placeholder}
+        search={search}
+      />
+      {/* <SearchResults results={results} /> */}
     </div>
   )
 }
