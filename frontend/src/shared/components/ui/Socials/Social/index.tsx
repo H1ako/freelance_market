@@ -17,8 +17,8 @@ export default function Social({
     <li className={styles.socials__social}>
       <a
         href={href}
-        no-referrerPolicy=''
         aria-label={name}
+        referrerPolicy='no-referrer'
         className={`${styles.social__button} ${className}`}
       >
         {children}
