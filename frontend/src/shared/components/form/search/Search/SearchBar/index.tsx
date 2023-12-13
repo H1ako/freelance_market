@@ -1,7 +1,6 @@
 'use client'
 
 import { useMemo } from 'react'
-import { Signal } from '@preact/signals-react'
 import debounce from 'lodash.debounce'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
@@ -9,26 +8,34 @@ import Input from '../../../Input'
 import styles from './styles.module.scss'
 
 export interface Props {
-  placeholder: string
+  searchQuery: string
+  setSearchQuery: React.Dispatch<React.SetStateAction<string>>
   search: (searchQuery: string) => void
-  searchQuery: Signal<string>
+  placeholder: string
 }
 
-export default function SearchBar({ searchQuery, placeholder, search }: Props) {
-  const debounceSearch = useMemo(() => debounce(search, 300), [search])
+export default function SearchBar({
+  searchQuery,
+  setSearchQuery,
+  placeholder,
+  search,
+}: Props) {
+  const debouncedSearch = useMemo(() => debounce(search, 300), [search])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    searchQuery.value = e.target.value
+    setSearchQuery(e.target.value)
 
-    debounceSearch(searchQuery.value)
+    debouncedSearch(e.target.value)
   }
 
   return (
     <label className={styles.search__bar}>
-      <FontAwesomeIcon className={styles.bar__icon} icon={faMagnifyingGlass} />
+      <span className={styles.bar__icon}>
+        <FontAwesomeIcon className={styles.icon__svg} icon={faMagnifyingGlass} />
+      </span>
       <Input
-        value={searchQuery.value}
-        className={styles.search__input}
+        value={searchQuery}
+        className={styles.bar__input}
         placeholder={placeholder}
         onChange={handleChange}
       />

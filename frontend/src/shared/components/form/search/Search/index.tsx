@@ -8,18 +8,21 @@ interface Props extends SearchBarProps, SearchResultsProps {}
 
 export default function Search({
   searchQuery,
+  setSearchQuery,
   placeholder,
   search,
   results,
+  setResults,
 }: Props) {
   return (
-    <div className={styles.search}>
+    <search className={styles.search}>
       <SearchBar
         searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
         placeholder={placeholder}
         search={search}
       />
-      {/* <SearchResults results={results} /> */}
-    </div>
+      <SearchResults results={results} setResults={setResults} />
+    </search>
   )
 }

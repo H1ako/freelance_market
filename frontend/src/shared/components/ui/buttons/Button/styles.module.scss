@@ -14,6 +14,7 @@
   justify-content: center;
   gap: .75rem;
   transition: var(--transition-ui);
+  backdrop-filter: var(--blur-effect-default);
 
   &:hover,
   &:not(:focus):focus-visible {

@@ -1,23 +1,22 @@
 'use client'
 
-import { signal, useSignal } from '@preact/signals-react'
+import { useState } from 'react'
 import Search from '../Search'
 
-// const results = signal<number>(0)
-// const searchQuery = signal<string>('')
-
 export default function SiteSearch() {
-  const results = useSignal<number>(0)
-  const searchQuery = useSignal<string>('')
+  const [searchQuery, setSearchQuery] = useState<string>('')
+  const [results, setResults] = useState<any>([])
 
   const search = (query: string) => {}
 
   return (
     <Search
-      searchQuery={searchQuery}
-      placeholder='Поиск по сайту'
       search={search}
+      searchQuery={searchQuery}
+      setSearchQuery={setSearchQuery}
+      setResults={setResults}
       results={results}
+      placeholder='Поиск по сайту'
     />
   )
 }
