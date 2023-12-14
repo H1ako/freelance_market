@@ -8,3 +8,8 @@
     grid-column: content;
   }
 }
+
+@mixin bluredBg() {
+  backdrop-filter: var(--blur-effect-default);
+  background: var(--color-el-bg);
+}

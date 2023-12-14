@@ -1,3 +1,5 @@
+@import "/src/shared/assets/styles/mixins";
+
 .accordion {
   position: relative;
 
@@ -20,6 +22,8 @@
     width: 100%;
 
     .title__btn {
+      @include bluredBg;
+
       width: 100%;
       display: flex;
       align-items: center;
@@ -30,7 +34,6 @@
       border-radius: var(--border-radius-button);
       padding: 0.75em 1.5em;
       font-size: var(--font-size-h4);
-      background: var(--color-el-bg);
       color: var(--color-text);
       text-align: left;
     }
@@ -43,8 +46,9 @@
   }
 
   &__content {
+    @include bluredBg;
+
     border-radius: 0 0 var(--border-radius-button) var(--border-radius-button);
-    background: var(--color-el-bg);
     padding-inline: 1.5em 1.5em;
     padding-block: 0;
     margin: 0;

@@ -16,9 +16,9 @@
     inset: 0;
     background: linear-gradient(
       180deg,
-      #0f0f10 2%,
+      var(--color-bg) 2%,
       rgba(15, 15, 16, 0.2) 50%,
-      #0f0f10 90%
+      var(--color-bg) 90%
     );
     z-index: -1;
   }
@@ -40,6 +40,7 @@
     left: 0;
     width: 100%;
     z-index: -2;
+    opacity: .8;
   }
 
   &__quote {

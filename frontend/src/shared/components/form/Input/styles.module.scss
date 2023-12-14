@@ -1,6 +1,9 @@
+@import "/src/shared/assets/styles/mixins";
+
 .input {
+  @include bluredBg;
+
   border-radius: var(--border-radius-button);
-  background: var(--color-el-bg);
   color: var(--color-text);
   padding: 0.5rem 1.5rem;
   font-size: var(--font-size-default);

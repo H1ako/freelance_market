@@ -2,9 +2,11 @@
 
 .footer {
     @include fullWidth;
+    @include bluredBg;
+    
     padding-bottom: 4rem;
-
-    background: var(--color-el-bg);
+    margin-top: 2rem;
+    
 
     &__go_top_btn {
         width: 100%;
