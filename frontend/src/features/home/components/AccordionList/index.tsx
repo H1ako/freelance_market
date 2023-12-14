@@ -1,35 +1,23 @@
 'use client'
 
-import Accordion from '@/features/home/components/Accordion'
 import styles from './styles.module.scss'
+import { Children } from 'react'
+import Accordion from '../Accordion/index'
 
-export default function AccordionList() {
+type ChildType = typeof Accordion
+
+interface Props {
+  children: React.ReactElement<ChildType> | React.ReactElement<ChildType>[]
+}
+
+export default function AccordionList({ children }: Props) {
   return (
     <ul className={styles.accordion_list}>
-      <li className={styles.accordion_list__el}>
-        <Accordion title='Легко ли начать?'>
-          Paragraph: Lorem ipsum dolor sit amet consectetur. In eu elit netus
-          pretium urna purus rutrum habitant cras. Vitae enim id nec sit sed
-          aliquam vitae in. Commodo congue sed vitae fames. Eleifend felis augue
-          commodo massa mollis.
-        </Accordion>
-      </li>
-      <li className={styles.accordion_list__el}>
-        <Accordion title='Легко ли начать?'>
-          Paragraph: Lorem ipsum dolor sit amet consectetur. In eu elit netus
-          pretium urna purus rutrum habitant cras. Vitae enim id nec sit sed
-          aliquam vitae in. Commodo congue sed vitae fames. Eleifend felis augue
-          commodo massa mollis.
-        </Accordion>
-      </li>
-      <li className={styles.accordion_list__el}>
-        <Accordion title='Легко ли начать?'>
-          Paragraph: Lorem ipsum dolor sit amet consectetur. In eu elit netus
-          pretium urna purus rutrum habitant cras. Vitae enim id nec sit sed
-          aliquam vitae in. Commodo congue sed vitae fames. Eleifend felis augue
-          commodo massa mollis.
-        </Accordion>
-      </li>
+      {Children.toArray(children)?.map((accordion, key) => (
+        <li key={key} className={styles.accordion_list__el}>
+          {accordion}
+        </li>
+      ))}
     </ul>
   )
 }

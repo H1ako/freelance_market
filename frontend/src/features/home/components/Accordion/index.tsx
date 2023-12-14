@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import styles from './styles.module.scss'
 
-interface Props {
+export interface Props {
   title: string
   children: React.ReactNode
 }

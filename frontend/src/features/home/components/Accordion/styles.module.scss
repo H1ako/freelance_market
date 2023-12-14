@@ -49,6 +49,7 @@
     display: grid;
     grid-template-rows: 0fr;
     transition: var(--transition-ui);
+    color: var(--color-text-secondary);
 
     & > * {
       overflow: hidden;
