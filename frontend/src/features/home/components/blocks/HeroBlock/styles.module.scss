@@ -24,13 +24,34 @@
     filter: blur(40px);
   }
 
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 9999px;
+    background: var(--color-accent);
+    aspect-ratio: 1;
+    height: 40vh;
+    height: 40svh;
+    right: -40vh;
+    right: -40svh;
+    bottom: 30vh;
+    bottom: 30svh;
+    translate: -50%;
+    top: 2.5vh;
+    top: 2.5svh;
+    z-index: -1;
+    opacity: 0.2;
+    filter: blur(40px);
+    display: none;
+  }
+
   &__title {
     font-weight: 500;
     margin: 0;
   }
 
   &__subtitle {
-    font-weight: 100;
+    font-weight: 300;
     margin-top: 0.75rem;
     color: var(--color-text-secondary);
   }

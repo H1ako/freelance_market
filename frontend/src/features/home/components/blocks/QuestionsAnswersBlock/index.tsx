@@ -1,6 +1,6 @@
 'use client'
 
-import QuestionAnswerList from '../../QuestionAnswerList'
+import AccordionList from '../../AccordionList'
 import styles from './styles.module.scss'
 
 export default function QuestionsAnswersBlock() {
@@ -9,7 +9,7 @@ export default function QuestionsAnswersBlock() {
       <h2 className={styles.hero_section__title}>
         Вопросы & Ответы
       </h2>
-      <QuestionAnswerList />
+      <AccordionList />
     </section>
   )
 }

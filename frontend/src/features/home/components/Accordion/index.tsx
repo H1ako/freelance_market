@@ -10,20 +10,22 @@ interface Props {
   children: React.ReactNode
 }
 
-export default function QuestionAnswer({ title, children }: Props) {
+export default function Accordion({ title, children }: Props) {
   const [isActive, setIsActive] = useState<boolean>(false)
 
   const toggleActivity = () => setIsActive(prevValue => !prevValue)
 
   return (
-    <li className={styles.q_a_list__el} data-active={isActive}>
-      <div className='el__question'>
-        <button onClick={toggleActivity} className={styles.question__btn}>
+    <div className={styles.accordion} data-active={isActive}>
+      <div className={styles.accordion__title}>
+        <button onClick={toggleActivity} className={styles.title__btn}>
           {title}
           <FontAwesomeIcon className={styles.btn__state_icon} icon={faPlus} />
         </button>
       </div>
-      <div className='el__answer'>{children}</div>
-    </li>
+      <div className={styles.accordion__content}>
+        <p>{children}</p>
+      </div>
+    </div>
   )
 }

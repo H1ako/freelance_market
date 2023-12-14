@@ -2,6 +2,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-columns:
@@ -46,9 +47,17 @@ img {
 @for $i from 1 through 6 {
   h#{$i} {
     font-size: var(--font-size-h#{$i});
+    font-weight: 500;
   }
 }
 
 p {
   font-size: var(--font-size-default);
+  font-weight: 300;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
