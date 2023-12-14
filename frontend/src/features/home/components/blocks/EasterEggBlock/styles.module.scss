@@ -1,0 +1,60 @@
+@import '/src/shared/assets/styles/mixins';
+
+.easter_egg_section {
+  @include fullWidth;
+
+  position: relative;
+  overflow: hidden;
+  padding-block: 3rem;
+  margin-top: 2rem;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      #0f0f10 2%,
+      rgba(15, 15, 16, 0.2) 50%,
+      #0f0f10 90%
+    );
+    z-index: -1;
+  }
+
+  &::after {
+    background: linear-gradient(
+      90deg,
+      #0f0f10 2%,
+      rgba(15, 15, 16, 0.2) 50%,
+      #0f0f10 90%
+    );
+   }
+
+  &__bg {
+    @include fullWidth;
+
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+  }
+
+  &__quote {
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    outline: transparent;
+    cursor: pointer;
+    margin-top: 2rem;
+
+    .btn__coin {
+      width: 7rem;
+      height: auto;
+    }
+  }
+}

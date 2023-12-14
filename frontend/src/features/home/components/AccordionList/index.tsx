@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './styles.module.scss'
-import { Children } from 'react'
+import { Children, useMemo } from 'react'
 import Accordion from '../Accordion/index'
 
 type ChildType = typeof Accordion
@@ -11,13 +11,15 @@ interface Props {
 }
 
 export default function AccordionList({ children }: Props) {
-  return (
-    <ul className={styles.accordion_list}>
-      {Children.toArray(children)?.map((accordion, key) => (
+  const computedChildren = useMemo(
+    () =>
+      Children.toArray(children)?.map((accordion, key) => (
         <li key={key} className={styles.accordion_list__el}>
           {accordion}
         </li>
-      ))}
-    </ul>
+      )),
+    [children]
   )
+
+  return <ul className={styles.accordion_list}>{computedChildren}</ul>
 }

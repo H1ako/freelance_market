@@ -1,0 +1,10 @@
+@mixin fullWidth() {
+  grid-column: full-width;
+
+  display: grid;
+  grid-template-columns: inherit;
+
+  & > * {
+    grid-column: content;
+  }
+}

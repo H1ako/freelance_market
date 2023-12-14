@@ -1,3 +1,5 @@
+@import "./mixins";
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
@@ -11,17 +13,10 @@ body {
     [content-end] minmax(var(--padding-main), 1fr)
     [full-width-end];
 
-  & > *,
-  .full-width > * {
+  & > * {
     grid-column: content;
   }
 
-  .full-width {
-    grid-column: full-width;
-
-    display: grid;
-    grid-template-columns: inherit;
-  }
 }
 
 ul {
@@ -30,6 +25,8 @@ ul {
 }
 
 main {
+  @include fullWidth;
+
   min-height: 100vh;
   min-height: 100svh;
 }
