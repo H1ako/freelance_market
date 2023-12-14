@@ -7,6 +7,7 @@
   overflow: hidden;
   padding-block: 3rem;
   margin-top: 2rem;
+  place-items: center;
 
   &::before,
   &::after {
@@ -29,12 +30,14 @@
       rgba(15, 15, 16, 0.2) 50%,
       #0f0f10 90%
     );
-   }
+  }
 
   &__bg {
     @include fullWidth;
 
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: -2;
   }

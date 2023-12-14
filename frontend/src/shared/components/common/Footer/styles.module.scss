@@ -1,4 +1,10 @@
+@import "/src/shared/assets/styles/mixins";
+
 .footer {
+    @include fullWidth;
+    padding-bottom: 4rem;
+
+    background: var(--color-el-bg);
 
     &__go_top_btn {
         width: 100%;

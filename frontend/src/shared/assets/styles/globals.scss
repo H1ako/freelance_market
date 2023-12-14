@@ -1,4 +1,4 @@
-@import "./mixins";
+@import './mixins';
 
 body {
   background: var(--color-bg);
@@ -16,7 +16,6 @@ body {
   & > * {
     grid-column: content;
   }
-
 }
 
 ul {
