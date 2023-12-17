@@ -13,8 +13,8 @@
     order: -1;
   }
 
-  &:not(:disabled):hover,
-  &:not(:disabled):not(:focus):focus-visible {
+  &[data-active="false"]:hover,
+  &[data-active="false"]:focus:focus-visible {
     color: var(--color-text);
     background: var(--color-el-bg);
   }

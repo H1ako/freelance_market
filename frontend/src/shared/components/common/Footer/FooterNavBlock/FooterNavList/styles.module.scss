@@ -1,6 +1,9 @@
 @import '/src/shared/assets/styles/mixins';
 
 .nav__list {
+  display: flex;
+  flex-direction: column;
+
   .list__link {
     position: relative;
 
