@@ -1,7 +1,7 @@
 'use client'
 
-import AccordionList from '../../AccordionList'
-import Accordion from '../../Accordion'
+import AccordionList from '@/shared/components/ui/AccordionList'
+import Accordion from '@/shared/components/ui/Accordion'
 import styles from './styles.module.scss'
 
 export default function QuestionsAnswersBlock() {

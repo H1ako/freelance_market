@@ -1,0 +1,21 @@
+@import '/src/shared/assets/styles/mixins';
+
+.nav_link {
+  @include buttonReset;
+
+  color: var(--color-text-secondary);
+
+  &[data-active="true"] {
+    color: var(--color-text);
+    background: var(--color-primary-ignorant);
+    pointer-events: none;
+    font-weight: 500;
+    order: -1;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):not(:focus):focus-visible {
+    color: var(--color-text);
+    background: var(--color-el-bg);
+  }
+}

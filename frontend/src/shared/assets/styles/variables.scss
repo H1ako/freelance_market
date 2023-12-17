@@ -1,6 +1,7 @@
 :root {
   /* -----start Colors----- */
   --color-primary: #8989e6;
+  --color-primary-ignorant: rgb(137, 137, 230, 0.25);
   --color-secondary: rgb(33, 33, 33);
   --color-accent: #dddd22;
 
@@ -27,7 +28,7 @@
   --width-content: min(100% - var(--padding-main) * 2, 1200px);
 
   --border-radius-button: 0.25em;
-  --border-radius-input: .25em;
+  --border-radius-input: 0.25em;
 
   --padding-main: 1.5rem;
   /* -----end Sizes----- */
@@ -36,5 +37,6 @@
 
   /* -----start Transitions----- */
   --transition-ui: 300ms;
+  --transition-button: 300ms;
   /* -----end Transitions----- */
 }

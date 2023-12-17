@@ -1,0 +1,14 @@
+@import '/src/shared/assets/styles/mixins';
+
+.nav__list {
+  .list__link {
+    position: relative;
+
+    & > * {
+      padding: 0.5em var(--padding-main);
+      font-size: var(--font-size-h4);
+      font-weight: 400;
+      height: 100%;
+    }
+  }
+}
