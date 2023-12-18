@@ -5,11 +5,13 @@ import styles from './styles.module.scss'
 
 export interface Props extends React.HTMLAttributes<HTMLAnchorElement> {
   href: string
+  onAttention?: any
   className?: string
 }
 
 export default function NavLink({
   className = '',
+  onAttention=undefined,
   href,
   ...defaultProps
 }: Props) {
@@ -18,6 +20,8 @@ export default function NavLink({
 
   return (
     <a
+      onMouseEnter={onAttention}
+      onFocus={onAttention}
       className={`${styles.nav_link} ${className}`}
       href={href}
       aria-disabled={isActive}

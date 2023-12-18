@@ -1,5 +1,25 @@
 @import '/src/shared/assets/styles/mixins';
 
 .footer__nav {
+  --thumb-height: 0;
+  --thumb-top: 0;
+
+  position: relative;
   grid-column: full-width !important;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: var(--color-el-bg);
+    width: 100%;
+    top: var(--thumb-top);
+    left: 0;
+    height: var(--thumb-height);
+    transition: var(--transition-button);
+    opacity: 1;
+  }
+
+  &.nav_hiden_thumb::before {
+    opacity: 0;
+  }
 }
