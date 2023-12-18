@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import debounce from 'lodash.debounce'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import Input from '../../../Input'
+import Input from '@/shared/components/form/Input'
 import styles from './styles.module.scss'
 
 export interface Props {

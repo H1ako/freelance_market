@@ -1,8 +1,9 @@
 'use client'
 
-import styles from './styles.module.scss'
+import { useState } from 'react'
 import SearchResults, { Props as SearchResultsProps } from './SearchResults'
 import SearchBar, { Props as SearchBarProps } from './SearchBar'
+import styles from './styles.module.scss'
 
 interface Props extends SearchBarProps, SearchResultsProps {}
 
@@ -14,15 +15,25 @@ export default function Search({
   results,
   setResults,
 }: Props) {
+  const [isActive, setIsActive] = useState<boolean>(false)
+
+  const openSearch = () => setIsActive(true)
+
   return (
     <search className={styles.search}>
       <SearchBar
+        openSearch={openSearch}
+        searchQuery={searchQuery}
+        placeholder={placeholder}
+      />
+      <SearchResults
+        placeholder={placeholder}
+        results={results}
+        setResults={setResults}
+        search={search}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        placeholder={placeholder}
-        search={search}
       />
-      <SearchResults results={results} setResults={setResults} />
     </search>
   )
 }

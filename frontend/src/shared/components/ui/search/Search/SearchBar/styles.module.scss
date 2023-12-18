@@ -1,0 +1,41 @@
+@import '/src/shared/assets/styles/mixins';
+
+.search__bar {
+  @include buttonReset;
+  @include bluredBg;
+
+  position: relative;
+  // box-shadow: 0px 0px 10px 0px rgba(137, 137, 230, 0.25);
+  border-radius: var(--border-radius-input);
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  padding: 0;
+
+  .bar__icon {
+    padding: 0.75rem 1.25rem;
+    flex-shrink: 0;
+    font-size: var(--font-size-h4);
+    display: grid;
+    place-items: center;
+    color: var(--color-text);
+  }
+
+  .bar__input {
+    @include bluredBg;
+
+    font-size: var(--font-size-default);
+    border: none;
+    padding: 0.75rem 1.25rem 0.75rem 0;
+    backdrop-filter: none;
+    border-radius: 0;
+    width: 100%;
+    background: none;
+    color: var(--color-text-secondary);
+    text-align: left;
+
+    &[data-active='true'] {
+      color: var(--color-text);
+    }
+  }
+}
