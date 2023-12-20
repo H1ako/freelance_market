@@ -7,14 +7,15 @@ export default function SiteSearch() {
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [results, setResults] = useState<any>([])
 
-  const search = (query: string) => {}
+  const search = (query: string) => {
+    console.log(query)
+  }
 
   return (
     <Search
       search={search}
       searchQuery={searchQuery}
       setSearchQuery={setSearchQuery}
-      setResults={setResults}
       results={results}
       placeholder='Поиск по сайту'
     />

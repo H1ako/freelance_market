@@ -1,0 +1,24 @@
+@import '/src/shared/assets/styles/mixins';
+
+.search_spotlight {
+  position: relative;
+
+  &__overlay {
+    padding-top: 2rem;
+    left: 0;
+  }
+
+  &__inner {
+    width: 100%;
+    padding-top: 2rem;
+    padding-inline: 0;
+    width: var(--width-content);
+    margin-inline: auto;
+
+    .inner__content {
+      @include bluredBg;
+
+      width: 100%;
+    }
+  }
+}

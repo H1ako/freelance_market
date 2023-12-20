@@ -1,0 +1,15 @@
+.actions__action {
+  width: 100%;
+  transition: var(--transition-ui);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--border-radius-button);
+
+  &:hover,
+  &:focus-within:focus-visible {
+    background: var(--color-el-bg-active);
+  }
+
+  .action__title {
+    margin: 0;
+  }
+}

@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from 'react'
-import SearchResults, { Props as SearchResultsProps } from './SearchResults'
-import SearchBar, { Props as SearchBarProps } from './SearchBar'
+import SearchSpotlight, {
+  Props as SearchSpotlightProps,
+} from './SearchSpotlight'
+import SearchBar from './SearchBar'
 import styles from './styles.module.scss'
+import { spotlight } from '@mantine/spotlight'
 
-interface Props extends SearchBarProps, SearchResultsProps {}
+interface Props extends SearchSpotlightProps {}
 
 export default function Search({
   searchQuery,
@@ -13,11 +15,9 @@ export default function Search({
   placeholder,
   search,
   results,
-  setResults,
 }: Props) {
-  const [isActive, setIsActive] = useState<boolean>(false)
-
-  const openSearch = () => setIsActive(true)
+  // const openSearch = () => setIsActive(true)
+  const openSearch = () => spotlight.open()
 
   return (
     <search className={styles.search}>
@@ -26,10 +26,9 @@ export default function Search({
         searchQuery={searchQuery}
         placeholder={placeholder}
       />
-      <SearchResults
+      <SearchSpotlight
         placeholder={placeholder}
         results={results}
-        setResults={setResults}
         search={search}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}

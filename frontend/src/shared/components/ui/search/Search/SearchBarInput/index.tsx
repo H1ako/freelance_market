@@ -14,7 +14,7 @@ export interface Props {
   placeholder: string
 }
 
-export default function SearchBar({
+export default function SearchBarInput({
   searchQuery,
   setSearchQuery,
   placeholder,
