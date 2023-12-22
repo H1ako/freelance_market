@@ -3,9 +3,9 @@
 import SearchSpotlight, {
   Props as SearchSpotlightProps,
 } from './SearchSpotlight'
+import { spotlight } from '@mantine/spotlight'
 import SearchBar from './SearchBar'
 import styles from './styles.module.scss'
-import { spotlight } from '@mantine/spotlight'
 
 interface Props extends SearchSpotlightProps {}
 
@@ -16,7 +16,6 @@ export default function Search({
   search,
   results,
 }: Props) {
-  // const openSearch = () => setIsActive(true)
   const openSearch = () => spotlight.open()
 
   return (

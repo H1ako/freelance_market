@@ -1,5 +1,5 @@
-import styles from './SmallLogo.module.css'
+import styles from './styles.module.scss'
 
 export default function SmallLogo() {
-  return <h3>Workerss</h3>
+  return <h3 className={styles.logo}>Workerss</h3>
 }

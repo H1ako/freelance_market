@@ -5,6 +5,7 @@ interface Props {
   href: string
   name: string
   className?: string
+  showName?: boolean
 }
 
 export default function Social({
@@ -12,17 +13,17 @@ export default function Social({
   name,
   children = null,
   className = '',
+  showName = true,
 }: Props) {
   return (
-    <li className={styles.socials__social}>
-      <a
-        href={href}
-        aria-label={name}
-        referrerPolicy='no-referrer'
-        className={`${styles.social__button} ${className}`}
-      >
-        {children}
-      </a>
-    </li>
+    <a
+      href={href}
+      aria-label={name}
+      referrerPolicy='no-referrer'
+      className={`${styles.social} ${className}`}
+    >
+      {children}
+      {showName && <span className={styles.social__name}>{name}</span>}
+    </a>
   )
 }

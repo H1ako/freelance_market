@@ -1,0 +1,19 @@
+@import '/src/shared/assets/styles/mixins';
+
+.social {
+  @include buttonReset;
+
+  border-radius: var(--border-radius-button);
+  background: var(--color-secondary);
+  padding: 0.5em;
+
+  svg {
+    color: var(--color-accent);
+    flex-shrink: 0;
+    font-size: var(--font-size-h3);
+  }
+
+  &__name {
+    flex-shrink: 1;
+  }
+}
