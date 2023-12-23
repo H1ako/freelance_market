@@ -38,4 +38,13 @@
       color: var(--color-text);
     }
   }
+
+  .bar__badge {
+    position: absolute;
+    right: .5rem;
+
+    @media (width < 770px) {
+      display: none;
+    }
+  }
 }

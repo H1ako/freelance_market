@@ -2,6 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import KeyboardBadge from '@/shared/components/ui/KeyboardBadge'
 import styles from './styles.module.scss'
 
 export interface Props {
@@ -25,6 +26,7 @@ export default function SearchBar({ searchQuery, placeholder, openSearch }: Prop
       <p className={styles.bar__input} data-active={isActive}>
         {value}
       </p>
+      <KeyboardBadge className={styles.bar__badge} keys={['Ctrl', 'K']} />
     </button>
   )
 }

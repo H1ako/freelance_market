@@ -1,0 +1,16 @@
+@import '/src/shared/assets/styles/mixins';
+
+.key_badge {
+  @include bluredBg;
+
+  font-size: var(--font-size-h6);
+  border-radius: var(--border-radius-button);
+
+  &__key {
+    white-space: nowrap;
+    border: none;
+    font-size: var(--font-size-default);
+    border-radius: var(--border-radius-button);
+    background: none;
+  }
+}

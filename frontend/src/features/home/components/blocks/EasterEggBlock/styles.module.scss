@@ -18,7 +18,7 @@
       180deg,
       var(--color-bg) 2%,
       rgba(15, 15, 16, 0.2) 50%,
-      var(--color-bg) 90%
+      var(--color-bg) 98%
     );
     z-index: -1;
   }
@@ -28,7 +28,7 @@
       90deg,
       #0f0f10 2%,
       rgba(15, 15, 16, 0.2) 50%,
-      #0f0f10 90%
+      #0f0f10 98%
     );
   }
 
@@ -40,7 +40,7 @@
     left: 0;
     width: 100%;
     z-index: -2;
-    opacity: .8;
+    opacity: 0.8;
   }
 
   &__quote {
