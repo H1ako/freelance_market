@@ -21,7 +21,9 @@ export default function KeyboardBadge({ keys, className = '' }: Props) {
           </>
         ))
       ) : (
-        <Kbd className={styles.key_badge__key}>{keys}</Kbd>
+        <>
+          <Kbd className={styles.key_badge__key}>{keys}</Kbd>
+        </>
       )}
     </div>
   )

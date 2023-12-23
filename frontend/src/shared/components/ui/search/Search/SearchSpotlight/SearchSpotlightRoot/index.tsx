@@ -26,6 +26,7 @@ export default function SearchSpotlightRoot({
       withinPortal={false}
       className={styles.search_spotlight}
       scrollable={true}
+      shortcut={['mod + K', '/']}
     >
       {children}
     </Spotlight.Root>

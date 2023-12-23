@@ -26,7 +26,7 @@ export default function SearchBar({ searchQuery, placeholder, openSearch }: Prop
       <p className={styles.bar__input} data-active={isActive}>
         {value}
       </p>
-      <KeyboardBadge className={styles.bar__badge} keys={['Ctrl', 'K']} />
+      <KeyboardBadge className={styles.bar__badge} keys={'/'} />
     </button>
   )
 }
