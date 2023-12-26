@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 interface Props {
@@ -16,7 +17,7 @@ export default function Social({
   showName = true,
 }: Props) {
   return (
-    <a
+    <Link
       href={href}
       aria-label={name}
       referrerPolicy='no-referrer'
@@ -24,6 +25,6 @@ export default function Social({
     >
       {children}
       {showName && <span className={styles.social__name}>{name}</span>}
-    </a>
+    </Link>
   )
 }

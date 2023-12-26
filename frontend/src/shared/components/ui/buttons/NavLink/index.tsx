@@ -1,6 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 export interface Props extends React.HTMLAttributes<HTMLAnchorElement> {
@@ -19,7 +20,7 @@ export default function NavLink({
   const isActive = href === pathname
 
   return (
-    <a
+    <Link
       onMouseEnter={onAttention}
       onFocus={onAttention}
       className={`${styles.nav_link} ${className}`}

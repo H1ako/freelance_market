@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import styles from './styles.module.scss'
 
 export interface Props
@@ -14,7 +15,7 @@ export default function Button({
 }: Props) {
   if (href !== undefined) {
     return (
-      <a
+      <Link
         href={href}
         className={`${styles.button} ${className}`}
         {...defaultProps}
