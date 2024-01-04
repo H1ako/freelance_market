@@ -6,6 +6,7 @@ import styles from './styles.module.scss'
 
 export interface Props
   extends React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
+  disabled?: boolean
   href?: string
   label?: string
 }
@@ -13,6 +14,7 @@ export interface Props
 export default function PureButton({
   className = '',
   href = undefined,
+  disabled = false,
   label = '',
   ...defaultProps
 }: Props) {
@@ -22,6 +24,7 @@ export default function PureButton({
         <Link
           href={href}
           className={`${styles.pure_button} ${className}`}
+          aria-disabled={disabled}
           aria-label={label}
           {...defaultProps}
         />
@@ -30,8 +33,9 @@ export default function PureButton({
 
     return (
       <button
-        aria-label={label}
         className={`${styles.pure_button} ${className}`}
+        aria-label={label}
+        aria-disabled={disabled}
         {...defaultProps}
       />
     )

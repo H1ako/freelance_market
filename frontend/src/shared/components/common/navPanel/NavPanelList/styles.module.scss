@@ -1,6 +1,7 @@
 .nav_panel__list {
   width: 100%;
   display: flex;
+  justify-content: space-around;
 
   .list__item {
     padding: .75em 1em;

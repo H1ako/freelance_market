@@ -3,5 +3,9 @@
 
   .wrapper__btn {
     font-size: var(--font-size-h4);
+
+    &.btn_active {
+      color: var(--color-accent);
+    }
   }
 }

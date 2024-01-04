@@ -1,8 +1,8 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import styles from './styles.module.scss'
+import useLinkActivity from '@/shared/hooks/useLinkActivity'
 
 export interface Props extends React.HTMLAttributes<HTMLAnchorElement> {
   href: string
@@ -12,12 +12,11 @@ export interface Props extends React.HTMLAttributes<HTMLAnchorElement> {
 
 export default function NavLink({
   className = '',
-  onAttention=undefined,
+  onAttention = undefined,
   href,
   ...defaultProps
 }: Props) {
-  const pathname = usePathname()
-  const isActive = href === pathname
+  const { isActive } = useLinkActivity(href)
 
   return (
     <Link
