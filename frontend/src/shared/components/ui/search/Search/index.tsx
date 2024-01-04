@@ -2,9 +2,9 @@
 
 import SearchSpotlight, {
   Props as SearchSpotlightProps,
-} from './SearchSpotlight'
+} from '../SearchSpotlight'
 import { spotlight } from '@mantine/spotlight'
-import SearchBar from './SearchBar'
+import SearchBar from '../SearchBar'
 import styles from './styles.module.scss'
 
 interface Props extends SearchSpotlightProps {}

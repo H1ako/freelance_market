@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
-import FooterNavList from './FooterNavList'
+import FooterNavList from '../FooterNavList'
 import NavLink from '@/shared/components/ui/buttons/NavLink'
 import styles from './styles.module.scss'
 

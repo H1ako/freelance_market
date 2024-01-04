@@ -2,7 +2,7 @@
 
 import { Children } from 'react'
 import { Spotlight } from '@mantine/spotlight'
-import SearchResult from './SearchResult'
+import SearchResult from '../SearchResult'
 import styles from './styles.module.scss'
 
 type ChildType = typeof SearchResult

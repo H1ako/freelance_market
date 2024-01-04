@@ -2,10 +2,10 @@
 
 import { useMemo } from 'react'
 import debounce from 'lodash.debounce'
-import SearchSpotlightBar from './SearchSpotlightBar'
-import SearchResults from './SearchResults'
-import SearchResult from './SearchResults/SearchResult'
-import SearchSpotlightRoot from './SearchSpotlightRoot'
+import SearchSpotlightBar from '../SearchSpotlightBar'
+import SearchResults from '../SearchResults'
+import SearchResult from '../SearchResult'
+import SearchSpotlightRoot from '../SearchSpotlightRoot'
 
 export interface Props {
   results: any

@@ -1,6 +1,6 @@
 import SmallLogo from '@/shared/components/ui/SmallLogo'
-import Socials from '@/shared/components/ui/Socials'
-import Social from '@/shared/components/ui/Socials/Social'
+import Socials from '@/shared/components/ui/socials/Socials'
+import Social from '@/shared/components/ui/socials/Social'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faTelegram, faVk } from '@fortawesome/free-brands-svg-icons'
 import styles from './styles.module.scss'

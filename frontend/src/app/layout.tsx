@@ -5,7 +5,7 @@ import '../shared/assets/styles/globals.scss'
 import '@mantine/core/styles.layer.css';
 import type { Metadata } from 'next'
 import SiteSeachHeader from '@/shared/components/common/header/SiteSeachHeader'
-import Footer from '@/shared/components/common/Footer'
+import Footer from '@/shared/components/common/footer/Footer'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 
 export const metadata: Metadata = {

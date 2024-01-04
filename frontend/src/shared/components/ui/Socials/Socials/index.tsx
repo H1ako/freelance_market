@@ -1,5 +1,5 @@
 import { Children } from 'react'
-import Social from './Social'
+import Social from '../Social'
 import styles from './styles.module.scss'
 
 type ChildType = typeof Social
