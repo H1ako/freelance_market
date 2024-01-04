@@ -4,9 +4,10 @@ import '../shared/assets/styles/variables.scss'
 import '../shared/assets/styles/globals.scss'
 import '@mantine/core/styles.layer.css';
 import type { Metadata } from 'next'
+import { MantineProvider } from '@mantine/core'
 import SiteSeachHeader from '@/shared/components/common/header/SiteSeachHeader'
 import Footer from '@/shared/components/common/footer/Footer'
-import { ColorSchemeScript, MantineProvider } from '@mantine/core'
+import NavPanel from '@/shared/components/common/navPanel/NavPanel';
 
 export const metadata: Metadata = {
   title: 'Workerss',
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: Props) {
           <SiteSeachHeader />
           {children}
           <Footer />
+          <NavPanel />
         </MantineProvider>
       </body>
     </html>

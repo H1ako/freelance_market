@@ -1,7 +1,7 @@
 'use client'
 
 import { Children, useMemo } from 'react'
-import Accordion from '../Accordion/index'
+import Accordion from '../Accordion'
 import styles from './styles.module.scss'
 
 type ChildType = typeof Accordion

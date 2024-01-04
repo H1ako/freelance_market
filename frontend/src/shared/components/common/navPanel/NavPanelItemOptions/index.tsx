@@ -7,9 +7,6 @@ interface Props {
 
 export default function NavPanelItemOptions({}: Props) {
   return (
-    <li className={styles.list__item}>
-      <button className={styles.item__btn}>
-      </button>
-    </li>
+    <></>
   )
 }

@@ -13,7 +13,7 @@ export default function NavPanel({}: Props) {
   return (
     <nav aria-label='Mobile Navigation Panel' className={styles.nav_panel}>
       <NavPanelList>
-        <NavPanelItem title={'Главная'} icon={faHouse}>
+        <NavPanelItem href='/' title='Главная' icon={faHouse}>
           <NavPanelItemOptions>
             <NavPanelItemOption
               icon={faHouse}

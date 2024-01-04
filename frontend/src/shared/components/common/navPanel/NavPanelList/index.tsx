@@ -9,7 +9,7 @@ interface Props {
 
 export default function NavPanelList({ children }: Props) {
   return (
-    <ul className={styles.nav_panel__items}>
+    <ul className={styles.nav_panel__list}>
       {Children.toArray(children).map((child, key) => (
         <li key={key} className={styles.list__item}>
           {child}

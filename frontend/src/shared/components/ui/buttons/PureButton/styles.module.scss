@@ -1,0 +1,17 @@
+@import '/src/shared/assets/styles/mixins';
+
+.pure_button__tip {
+  @include bluredBg;
+
+  border-radius: var(--border-radius-button);
+  color: var(--color-text);
+  font-size: var(--font-size-h5);
+}
+
+.pure_button {
+  @include buttonReset;
+
+  color: var(--color-text);
+  font-size: var(--font-size-default);
+  font-weight: 400;
+}

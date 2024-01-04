@@ -5,12 +5,8 @@
   --hover-color: var(--color-text);
 
   @include bluredBg;
-  @include buttonReset;
 
-  color: var(--color-text);
   padding: 0.75em 1.25em;
-  font-size: var(--font-size-default);
-  font-weight: 400;
   justify-content: center;
   border-radius: var(--border-radius-button);
 

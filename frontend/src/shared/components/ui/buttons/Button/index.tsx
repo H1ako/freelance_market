@@ -1,28 +1,12 @@
 'use client'
 
-import Link from 'next/link'
+import PureButton, { Props as PureButtonProps } from '../PureButton'
 import styles from './styles.module.scss'
 
-export interface Props
-  extends React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
-  href?: string | undefined
-}
+export interface Props extends PureButtonProps {}
 
-export default function Button({
-  className = '',
-  href = undefined,
-  ...defaultProps
-}: Props) {
-  if (href !== undefined) {
-    return (
-      <Link
-        href={href}
-        className={`${styles.button} ${className}`}
-        {...defaultProps}
-      />
-    )
-  }
+export default function Button({ className = '', ...defaultProps }: Props) {
   return (
-    <button className={`${styles.button} ${className}`} {...defaultProps} />
+    <PureButton className={`${styles.button} ${className}`} {...defaultProps} />
   )
 }

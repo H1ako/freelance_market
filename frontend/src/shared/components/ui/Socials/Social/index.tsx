@@ -1,4 +1,6 @@
-import Link from 'next/link'
+'use client'
+
+import PureButton from '../../buttons/PureButton'
 import styles from './styles.module.scss'
 
 interface Props {
@@ -17,14 +19,13 @@ export default function Social({
   showName = true,
 }: Props) {
   return (
-    <Link
+    <PureButton
       href={href}
-      aria-label={name}
-      referrerPolicy='no-referrer'
+      label={name}
       className={`${styles.social} ${className}`}
     >
       {children}
       {showName && <span className={styles.social__name}>{name}</span>}
-    </Link>
+    </PureButton>
   )
 }
