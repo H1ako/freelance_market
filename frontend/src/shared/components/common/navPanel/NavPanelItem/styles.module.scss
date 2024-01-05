@@ -1,8 +1,18 @@
+@import '/src/shared/assets/styles/mixins';
+
 .item__wrapper {
   position: relative;
 
   .wrapper__btn {
     font-size: var(--font-size-h4);
+
+    padding: .75em 1em;
+    border-radius: var(--border-radius-button);
+
+    &:not([aria-disabled="true"]):focus-visible,
+    &:hover {
+      background: var(--color-el-bg);
+    }
 
     &.btn_active {
       color: var(--color-accent);

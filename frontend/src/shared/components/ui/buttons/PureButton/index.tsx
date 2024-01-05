@@ -25,6 +25,7 @@ export default function PureButton({
           href={href}
           className={`${styles.pure_button} ${className}`}
           aria-disabled={disabled}
+          tabIndex={disabled ? -1 : 1}
           aria-label={label}
           {...defaultProps}
         />
@@ -36,6 +37,7 @@ export default function PureButton({
         className={`${styles.pure_button} ${className}`}
         aria-label={label}
         aria-disabled={disabled}
+        tabIndex={disabled ? -1 : 1}
         {...defaultProps}
       />
     )
